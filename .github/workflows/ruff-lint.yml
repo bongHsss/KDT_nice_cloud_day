@@ -1,0 +1,26 @@
+name: Ruff Lint
+
+on:
+  push:
+    branches:
+      - dev  # dev 브랜치로 푸시될 때만 실행
+
+jobs:
+  lint:
+    name: Run Ruff
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # 원하는 Python 버전
+
+    - name: Install Ruff
+      run: pip install ruff
+
+    - name: Run Ruff with config
+      run: ruff . --config=pyproject.toml
