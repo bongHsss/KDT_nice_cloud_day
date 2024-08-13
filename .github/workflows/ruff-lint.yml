@@ -23,4 +23,4 @@ jobs:
       run: pip install ruff
 
     - name: Run Ruff with config
-      run: ruff . --config=pyproject.toml
+      run: ruff check . --config=pyproject.toml
