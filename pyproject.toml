@@ -1,0 +1,20 @@
+[tool.ruff.lint]
+select = [
+    "F", 
+    "E", 
+    "W", 
+    "C",
+    "AIR",                                          # Common categories
+    "ICN",                                          # Airflow ICN
+    "Q",                                            # All Q codes
+    "I001", "I002",                                 # Import codes
+    "PD002", "PD003", "PD004", "PD015", "PD901",    # Pandas DataFrame codes
+    "N802", "N803", "N806", "N807", "N818", "N999",  # Naming convention codes
+    "UP032", "UP034",                               # Unused code codes
+    "ANN001", "ANN201", "ANN202",                   # Annotation codes
+    "S105", "S110", "S112",                         # Security codes
+    "A001",                                         # Async code checks
+    "B025",                                         # Best practices codes
+    "PLR2004"                                       # Plugin rules
+]
+ignore = ["E501"]
